@@ -24,9 +24,9 @@ summary: "Why design thinking and early user engagement are critical for buildin
 
 Over the past few years, I've had the opportunity to work at Microsoft building LLM-based software solutions for enterprise customers. These projects have spanned a wide range of applications, from conversational chatbots and intelligent assistants to sophisticated agentic systems designed for tasks like anomaly detection, workflow automation, and complex decision support.
 
-Through this work, one lesson has emerged more clearly than any other: **the technical challenges we face are often symptoms of not engaging users early enough**. Time and again, problems that seemed purely technical (data issues, reliability concerns, evaluation difficulties) could have been anticipated or avoided entirely through rigorous design thinking at the project's outset.
+Through this work, one lesson has emerged more clearly than any other: **the technical challenges we face are often symptoms of not engaging users in a tight enough loop**. Time and again, problems that seemed purely technical (data issues, reliability concerns, evaluation difficulties) could have been anticipated or avoided entirely through rigorous, ongoing design thinking throughout the project.
 
-This post argues that design thinking isn't just a nice process to follow. It's a critical risk mitigation strategy. I'll walk through common challenges in building agentic systems and show how early user engagement helps address each one.
+This post argues that design thinking isn't just a nice process to follow. It's a critical risk mitigation strategy. I'll walk through common challenges in building agentic systems and show how continuous user engagement helps address each one.
 
 > **A note on idealism:** What I'm describing here is an ideal state. In reality, timelines are compressed, stakeholders are busy, and perfect user engagement isn't always possible. But I believe it's important to have these conversations and strive toward this ideal, even when we fall short. Understanding what *should* happen helps us make better trade-offs when constraints force compromises.
 
@@ -44,11 +44,23 @@ Design thinking is a human-centered approach to problem-solving that prioritizes
 4. **Prototype**: Build quick, low-fidelity versions to test ideas
 5. **Test**: Gather feedback and iterate
 
+Listing these five phases might make design thinking sound similar to a waterfall process. In some ways, the phases themselves aren't that different from any structured development approach. What distinguishes design thinking is the *scale and frequency* of iteration. In a waterfall model, you might go through these phases once (or once per major release). In design thinking, you cycle through them repeatedly, sometimes within a single week.
+
+The tighter the loop with users, the faster you learn and the cheaper mistakes become.
+
+### The Prototype-to-Production Blur
+
+There's a tension worth acknowledging: at some point, low-fidelity prototypes aren't enough. Users can only give you so much feedback on mockups and wireframes. To really understand how people will use an agentic system, you need working software.
+
+This creates a blurry line between "prototype" and "shipped product." You might deploy a minimal working system to a small group of users, calling it a prototype, but from their perspective it's real software they're using to do real work. The development cycle naturally slows as you move from mockups to code, but the need for tight user feedback doesn't go away.
+
+This blur is actually okay. The goal isn't to maintain some artificial separation between prototyping and production. The goal is to keep learning from real usage, whatever you call it. Some of the best projects I've seen treat their first production release as an extended prototype, with built-in feedback mechanisms and a clear expectation that major changes are still on the table.
+
 ### Why It Matters for Agentic Systems
 
 In my experience, the projects that struggle most are those where the technical team builds in isolation, only to discover late in the process that the system doesn't fit the actual workflow or that users don't trust its outputs.
 
-**The people who will use the system must be involved from day one.** This isn't just a nice-to-have. It's essential. End users understand the nuances of their domain, the edge cases that will break your carefully designed prompts, and the trust barriers that will prevent adoption.
+**The people who will use the system must be involved from day one and stay involved throughout.** This isn't just a nice-to-have. It's essential. End users understand the nuances of their domain, the edge cases that will break your carefully designed prompts, and the trust barriers that will prevent adoption.
 
 Design thinking workshops at the outset of a project help ensure that:
 
@@ -142,6 +154,8 @@ This is where the non-deterministic nature of LLMs becomes particularly dangerou
 **How design thinking helps:** Users can help identify which steps are most critical for accuracy, where human checkpoints might be valuable, and what "close enough" means at each stage. Some tasks can tolerate approximation; others need precision. Only users can tell you which is which.
 
 ### Challenge 3: Evaluation and Testing
+
+If Challenge 1 was about understanding your data before you build, Challenge 3 is about understanding how the complete system performs once it's in users' hands. They're closely related. Both come down to the same question: does your understanding of "real" match actual reality? With data, you're asking whether your training and test data match what users will actually encounter. With evaluation, you're asking whether your metrics and benchmarks match what users actually care about.
 
 Evaluation is where everything comes together, or falls apart. You can build the most sophisticated agentic system in the world, but if you can't measure whether it's actually working, you're flying blind.
 
