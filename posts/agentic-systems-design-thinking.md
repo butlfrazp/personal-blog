@@ -78,15 +78,15 @@ If your evaluation data doesn't match what users actually throw at the system, y
 
 ## Practical Takeaways
 
-1. **Involve users from day one.** Not just for sign-off—for genuine input on workflows, edge cases, and trust barriers.
+1. **Engage end users and domain experts early.** The people who will actually use the system day-to-day—not just the stakeholders who commissioned it—should be part of the conversation from the start. They understand the workflows, edge cases, and trust barriers that won't appear in any requirements document.
 
-2. **Define success criteria with users before building.** What does "accurate enough" mean? What failure modes are acceptable?
+2. **Define success criteria collaboratively before building.** Work with the people who'll rely on the system to understand what "accurate enough" means for their context. What failure modes can they tolerate? What would make them stop trusting it?
 
-3. **Test with messy reality, not curated demos.** The questions users ask in the wild are different from what you expect.
+3. **Test with realistic usage, not curated demos.** Real users may phrase questions differently than you'd expect, approach tasks from unexpected angles, and encounter scenarios your test set didn't anticipate. Observing actual usage reveals these gaps.
 
-4. **Build in feedback mechanisms.** Users should be able to flag when the system fails them.
+4. **Build in feedback mechanisms.** Give people a way to flag when the system fails them—this creates a continuous stream of evaluation data and shows you're invested in getting it right.
 
-5. **Be honest about constraints.** If you can only do one user interview instead of ten, that's still better than zero.
+5. **Be honest about constraints.** If you can only do one conversation with end users instead of ten, that's still better than zero. Partial engagement beats no engagement.
 
 ## Conclusion
 
