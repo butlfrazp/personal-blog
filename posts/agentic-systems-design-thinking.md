@@ -40,6 +40,8 @@ There's a secondary benefit that's easy to overlook: design thinking imposes str
 
 When you have to articulate a problem clearly enough to discuss it with users, you can't hide behind vague intentions. When you have to explain what your prototype does, you discover the gaps in your own understanding. When you have to define success criteria collaboratively, you're forced to prioritize.
 
+On the T-Mobile project, we found ourselves questioning the solution throughout the engagement as more context emerged. We kept learning things mid-project that could have been established earlier with better upfront problem definition. For example, we eventually discovered that the true problem was getting both *dimensions* and *count* right—not just count alone. Accurate counts were still valuable, but they only told part of the story without correct dimensions. That's a fundamental insight about the problem structure, and we learned it late. A more rigorous design thinking process would have surfaced this priority earlier, saving us from optimizing the wrong thing.
+
 This organization pays dividends beyond user engagement. It makes your team more aligned, your stakeholder updates more coherent, and your technical decisions more defensible. The discipline of explaining your work to users makes you better at explaining it to everyone else too.
 
 ## Key Challenges (And How User Engagement Helps)
@@ -49,8 +51,8 @@ This organization pays dividends beyond user engagement. It makes your team more
 Many data problems are actually *user understanding* problems in disguise.
 
 - **Insufficient data:** Users know where documentation gaps exist and where tribal knowledge lives
-- **Data drift:** Users can tell you about seasonal patterns and upcoming business changes
-- **Distribution mismatch:** Watching real users reveals the large percentage of queries your test set missed
+- **Data drift:** Users can tell you about seasonal patterns and upcoming business changes. Understanding and communicating about data distributions is critical. On the T-Mobile project, we knew we were focusing on tower antennas as the first iteration—both the customer and our team were aligned and felt confident in this scope. But clear, ongoing communication is essential to ensure you're not solving only part of the problem when the customer might have grander expectations. Alignment on the *current* scope doesn't mean alignment on the *full* vision.
+- **Distribution mismatch:** Watching real users reveals gaps your test set missed. On the T-Mobile project, we were told throughout that we were on track to solve the right problem. But when we delivered, the customer mentioned that the large text output might need to be rethought for how they'd actually use it. The expectations we'd been building toward weren't fully grounded in the reality of day-to-day usage. Observing real users earlier would have surfaced this disconnect sooner.
 
 ### System Complexity
 
@@ -65,6 +67,10 @@ Agentic systems involve multi-step reasoning, tool usage, and state management.
 This deserves special attention: **LLM systems demo incredibly well**.
 
 A curated demo with practiced questions in a controlled environment creates unrealistic expectations. The gap between demo and production destroys trust.
+
+We saw this firsthand on the T-Mobile project. We jumped straight into solutioning and showed them a beautiful demo—polished interface, impressive responses, the whole package. The problem? That demo validated their existing assumptions rather than challenging them. Instead of taking a step back to critically examine whether their proposed approach was even the right one, we gave them a shiny artifact that confirmed what they already wanted to believe.
+
+This is the hidden danger with agentic and LLM solutions: **the demo can look beautiful while masking fundamental problems with the underlying approach**. A well-crafted demo creates a false sense of progress. It short-circuits the critical thinking needed to ask: "Is what we're building actually the right thing?"
 
 When you involve real users early—watching them interact with prototypes, hearing actual questions, seeing confusion—you discover the gap *before* stakeholders set expectations.
 
