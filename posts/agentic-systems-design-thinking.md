@@ -32,6 +32,8 @@ Problems that seem purely technical—data issues, reliability concerns, evaluat
 
 Design thinking is human-centered problem-solving: understand users, define the problem, ideate, prototype, and test. What makes it different from waterfall is the *scale and frequency* of iteration. The tighter the loop with users, the faster you learn.
 
+This matters for *all* software projects, but agentic systems raise the stakes. These systems make autonomous decisions, chain together multiple reasoning steps, and interact with external tools—often in ways that are difficult to predict or fully test upfront. The complexity compounds: small misunderstandings about user needs don't just create friction, they can cascade through multi-step workflows in unexpected ways. When the system is making decisions on behalf of users, you need to deeply understand what those users actually need.
+
 **The projects that struggle most are those where the technical team builds in isolation**, only to discover late that the system doesn't fit workflows or that users don't trust the outputs.
 
 ### It Also Forces You to Get Organized
@@ -40,7 +42,7 @@ There's a secondary benefit that's easy to overlook: design thinking imposes str
 
 When you have to articulate a problem clearly enough to discuss it with users, you can't hide behind vague intentions. When you have to explain what your prototype does, you discover the gaps in your own understanding. When you have to define success criteria collaboratively, you're forced to prioritize.
 
-On the T-Mobile project, we found ourselves questioning the solution throughout the engagement as more context emerged. We kept learning things mid-project that could have been established earlier with better upfront problem definition. For example, we eventually discovered that the true problem was getting both *dimensions* and *count* right—not just count alone. Accurate counts were still valuable, but they only told part of the story without correct dimensions. That's a fundamental insight about the problem structure, and we learned it late. A more rigorous design thinking process would have surfaced this priority earlier, saving us from optimizing the wrong thing.
+On the T-Mobile Anomaly Detection project, we found ourselves questioning the solution throughout the engagement as more context emerged. We kept learning things mid-project that could have been established earlier with better upfront problem definition. For example, we eventually discovered that the customer needed both *dimensions* and *count* to demonstrate value in this domain—not just count alone. Accurate counts were still valuable, but they only told part of the story without correct dimensions. That's a fundamental insight about what success looked like for the customer, and we learned it late. A more rigorous design thinking process would have surfaced this priority earlier, saving us from optimizing the wrong thing.
 
 This organization pays dividends beyond user engagement. It makes your team more aligned, your stakeholder updates more coherent, and your technical decisions more defensible. The discipline of explaining your work to users makes you better at explaining it to everyone else too.
 
@@ -51,8 +53,8 @@ This organization pays dividends beyond user engagement. It makes your team more
 Many data problems are actually *user understanding* problems in disguise.
 
 - **Insufficient data:** Users know where documentation gaps exist and where tribal knowledge lives
-- **Data drift:** Users can tell you about seasonal patterns and upcoming business changes. Understanding and communicating about data distributions is critical. On the T-Mobile project, we knew we were focusing on tower antennas as the first iteration—both the customer and our team were aligned and felt confident in this scope. But clear, ongoing communication is essential to ensure you're not solving only part of the problem when the customer might have grander expectations. Alignment on the *current* scope doesn't mean alignment on the *full* vision.
-- **Distribution mismatch:** Watching real users reveals gaps your test set missed. On the T-Mobile project, we were told throughout that we were on track to solve the right problem. But when we delivered, the customer mentioned that the large text output might need to be rethought for how they'd actually use it. The expectations we'd been building toward weren't fully grounded in the reality of day-to-day usage. Observing real users earlier would have surfaced this disconnect sooner.
+- **Data drift:** Users can tell you about seasonal patterns and upcoming business changes. Understanding and communicating about data distributions is critical. On the T-Mobile Anomaly Detection project, we knew we were focusing on tower antennas as the first iteration—both the customer and our team were aligned and felt confident in this scope. But clear, ongoing communication is essential to ensure you're not solving only part of the problem when the customer might have grander expectations. Alignment on the *current* scope doesn't mean alignment on the *full* vision.
+- **Distribution mismatch:** Watching real users reveals gaps your test set missed. On the T-Mobile Anomaly Detection project, we were told throughout that we were on track to solve the right problem. But when we delivered, the customer mentioned that the large text output might need to be rethought for how they'd actually use it. The expectations we'd been building toward weren't fully grounded in the reality of day-to-day usage. Observing real users earlier would have surfaced this disconnect sooner.
 
 ### System Complexity
 
@@ -68,7 +70,7 @@ This deserves special attention: **LLM systems demo incredibly well**.
 
 A curated demo with practiced questions in a controlled environment creates unrealistic expectations. The gap between demo and production destroys trust.
 
-We saw this firsthand on the T-Mobile project. We jumped straight into solutioning and showed them a beautiful demo—polished interface, impressive responses, the whole package. The problem? That demo validated their existing assumptions rather than challenging them. Instead of taking a step back to critically examine whether their proposed approach was even the right one, we gave them a shiny artifact that confirmed what they already wanted to believe.
+We saw this firsthand on the T-Mobile Anomaly Detection project. We jumped straight into solutioning and showed them a beautiful demo—polished interface, impressive responses, the whole package. The problem? That demo validated their existing assumptions rather than challenging them. Instead of taking a step back to critically examine whether their proposed approach was even the right one, we gave them a shiny artifact that confirmed what they already wanted to believe.
 
 This is the hidden danger with agentic and LLM solutions: **the demo can look beautiful while masking fundamental problems with the underlying approach**. A well-crafted demo creates a false sense of progress. It short-circuits the critical thinking needed to ask: "Is what we're building actually the right thing?"
 
@@ -81,6 +83,7 @@ If your evaluation data doesn't match what users actually throw at the system, y
 - Build evaluation datasets from real user queries, not technical team assumptions
 - Define "reliable enough" *with* users—requirements vary dramatically by use case
 - Measure task completion and user trust, not just technical metrics
+- Tune LLM-as-a-judge evaluators to align with SME feedback—we saw this on LESA, where iterating on the evaluator with domain experts dramatically improved how well automated metrics reflected real quality
 
 ## Practical Takeaways
 
@@ -92,7 +95,7 @@ If your evaluation data doesn't match what users actually throw at the system, y
 
 4. **Build in feedback mechanisms.** Give people a way to flag when the system fails them—this creates a continuous stream of evaluation data and shows you're invested in getting it right.
 
-5. **Be honest about constraints.** If you can only do one conversation with end users instead of ten, that's still better than zero. Partial engagement beats no engagement.
+5. **Be honest about constraints.** Real projects have limited time and busy stakeholders. One conversation with end users is still better than zero. Partial engagement beats no engagement—acknowledge your constraints, then do what you can within them.
 
 ## Conclusion
 
