@@ -36,7 +36,7 @@ Based on this experience, a few things I'm thinking about for future projects:
 2. **Define success criteria collaboratively** before building. What does "good enough" actually mean?
 3. **Test with realistic usage**, not curated demos. We started with demos but eventually integrated real images.
 4. **Build in feedback loops** so we're learning continuously, not just at delivery. Make sure to surface both the good and the bad, not just demo highlights.
-5. **Tune evaluators with SMEs**. On LESA, iterating on LLM-as-a-judge with domain experts dramatically improved how well metrics reflected real quality
+5. **Tune evaluators with SMEs**. On T-Mobile LESA, iterating on LLM-as-a-judge with domain experts dramatically improved how well metrics reflected real quality
 
 ## Want to Hear From You
 
