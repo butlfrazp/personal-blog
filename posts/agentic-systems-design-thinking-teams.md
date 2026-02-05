@@ -1,26 +1,26 @@
-# Reflecting on the T-Mobile Anomaly Detection Project: What Would You Have Done Differently?
+# Reflecting on the T-Mobile Anomaly Detection Project: Learnings from a Successful Engagement
 
 Hey team, wanted to share some observations from our recent customer work and get your thoughts.
 
-After wrapping up the T-Mobile Anomaly Detection project, I've been reflecting on what we could have done differently for greater customer impact. We delivered something, but I keep thinking about the moments where a more user-centric approach might have changed our trajectory earlier. Curious if others have run into similar patterns.
+The T-Mobile Anomaly Detection project was a success. We delivered what the customer wanted to see and helped them measure the feasibility of their vision. The forcing functions we put in place ensured they could see real value. That said, every successful engagement has learnings, and I've been reflecting on what we could refine for even greater impact next time. Curious if others have run into similar patterns.
 
-## The Demo Trap
+## The Demo Dynamic
 
-Here's what happened: we jumped straight into solutioning and showed T-Mobile a beautiful demo. Polished interface, impressive responses, the whole package.
+Early on, we showed T-Mobile a polished demo. Impressive interface, strong responses, the whole package. It worked: it built excitement and helped the customer see what was possible.
 
-The problem? **That demo validated their existing assumptions rather than challenging them.** Instead of taking a step back to critically examine whether their proposed approach was even the right one, we gave them a shiny artifact that confirmed what they already wanted to believe.
+But here's a tension worth naming: **that demo also validated their existing assumptions rather than challenging them.** It confirmed what they wanted to believe, which is great for momentum but can shortcut the critical thinking about whether the approach is right.
 
-This feels like a common trap with LLM/agentic work. The demo looks great, which creates false confidence. Has anyone else experienced this? What's worked to avoid it?
+This is a common dynamic with LLM/agentic work. The demo looks great, which builds confidence. The question is how to balance that momentum with space to question the underlying approach. Has anyone found a good way to navigate this?
 
-## Things We Learned Too Late
+## Learnings Along the Way
 
-Throughout the engagement, we kept discovering things mid-project that could have been established earlier:
+Throughout the engagement, we kept learning things that refined our understanding:
 
-- **Dimensions mattered as much as count.** The customer needed both to demonstrate value, not just count alone. We optimized count first, only to realize dimensions were equally critical.
+- **Dimensions mattered as much as count.** The customer needed both to demonstrate value, not just count alone. We initially focused on count, then adapted once we understood dimensions were equally critical.
 
-- **Output format for real usage.** We were told we were on track, but at delivery they mentioned the large text output might need rethinking for day-to-day use. That feedback could have come way earlier.
+- **Output format for real usage.** At delivery, the customer mentioned the large text output might need rethinking for day-to-day use. Valid feedback that we could potentially surface earlier with more structured problem definition upfront.
 
-A more rigorous design thinking process (user interviews, journey mapping, even just more structured problem definition sessions) might have surfaced these earlier.
+These aren't failures. They're the natural evolution of understanding a complex problem. The question is whether a more rigorous design thinking process (user interviews, journey mapping, structured problem definition) could surface some of these insights earlier.
 
 ## Why Agentic Systems Make This Harder
 
